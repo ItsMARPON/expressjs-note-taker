@@ -26,7 +26,7 @@ const hide = (elem) => {
 let activeNote = {};
 
 const getNotes = () =>
-  fetch('/api/notes', {
+  fetch('/notes', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ const getNotes = () =>
   });
 
 const saveNote = (note) =>
-  fetch('/api/notes', {
+  fetch('/notes', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -181,3 +181,63 @@ if (window.location.pathname === '/notes') {
 }
 
 getAndRenderNotes();
+
+// const title = document.getElementsByClassName("note-title");
+// const text = document.getElementsByClassName("note-textarea");
+// const noteList = document.getElementsByClassName("list-group");
+// const saveNote = document.getElementById("save-note");
+// const newNote = document.getElementById("new-note");
+
+// // function accepts a "note" object, sends a POST request and returns the result
+// const postNote = (note) =>
+//   // Fetch api call with declared HTTP method, the request body, and header
+//   fetch("/notes", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(note),
+//   })
+//     .then((res) => res.json())
+//     .then((data) => {
+//       console.log("Successful POST request:", data);
+//       return data;
+//     })
+//     .catch((error) => {
+//       console.error("Error in POST request:", error);
+//     });
+
+// // Listen for when the form is submitted
+// newNote.addEventListener("click", (e) => {
+//   e.preventDefault();
+
+//   // create a new note object from the input
+//   const addNote = {
+//     title: title.value.trim(),
+//     text: text.value.trim(),
+//   };
+//   saveNote.addEventListener("click", (e) => {
+//     e.preventDefault();
+
+//     postNote(addNote)
+//       .then(function (response) {
+//         if (response.ok) {
+//           console.log(response);
+//           return response.json();
+//         } else {
+//           alert("ERROR" + response.statusText);
+//         }
+//       })
+//       .then(function (data) {
+//         for (let i = 0; i < data.length; i++) {
+//           var listNoteTitle = document.createElement("li");
+//           listNoteTitle.textContent = data[i].title;
+//           noteList.appendChild(listNoteTitle);
+//           var listNoteText = document.createElement("li");
+//           listNoteText.textContent = data[i].text;
+//           noteList.appendChild(listNoteText);
+//         }
+//       })
+//       .catch((err) => console.error(err));
+//   });
+// });
