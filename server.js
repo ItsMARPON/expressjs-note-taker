@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/", homeRoutes);
 app.use("/api/notes", notes);
 
+
 app.use(express.static("public"));
 
 app.listen(PORT, () =>
