@@ -1,7 +1,7 @@
 const notes = require("express").Router();
-const path = require("path");
 let db = require("../db/db.json");
 const fs = require("fs");
+const uuid = require("../helpers/uuid");
 
 notes.get("/", (req, res) => {
   res.status(200).json(db);
@@ -17,7 +17,7 @@ notes.post("/", (req, res) => {
     let newNote = {
       title,
       text,
-      id: length + 1,
+      id: uuid(),
     };
     const noteString = JSON.stringify(newNote);
 
