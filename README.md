@@ -6,9 +6,25 @@ To create an note-taking application for small businesses that can be used to wr
 
 ## Table of Contents
 
-## Installation
+- [Installation](#installation)
 
-## Usage
+- [Usage](#usage)
+
+- [Credits](#credits)
+
+- [license](#license)
+
+- [Badges](#badges)
+
+- [Questions](#questions)
+
+## Installation<a name="installation"></a>
+
+Install Node.js version 16 <br />
+Install Express version 4.16.4 <br />
+
+
+## Usage<a name="usage"></a>
 
 GIVEN a note-taking application <br />
 WHEN I open the Note Taker <br />
@@ -24,12 +40,21 @@ THEN that note appears in the right-hand column <br />
 WHEN I click on the Write icon in the navigation at the top of the page <br />
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column <br />
 
-## Credits
+## Credits<a name="credits"></a>
 
 Starter code -Xandromus (https://github.com/coding-boot-camp/miniature-eureka)
 
-## License
+## License<a name ="license"></a>
 
-## Badges
+MIT License (https://opensource.org/licenses/MIT)
 
-## How to contribute
+## Badges(a name="badges"></a>)
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+## Questions<a name="questions"></a>
+
+Contact me with questions at the following links:
+GitHub Username: itsMARPON
+GitHub URL: https://github.com/ItsMARPON
+Email: itsmaryyang@gmail.com
